@@ -88,10 +88,6 @@ class Game{
 }
 
 
-
-// // 5. Enjoy the game
-// const familyGame = new Game("soft","Ewaade")
-
 // 5. Print the game to the DOM
 
 // a. Creat a Dom class with it constructor and creae a this property for our needed elements
