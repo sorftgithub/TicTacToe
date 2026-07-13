@@ -8,8 +8,31 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="game-container">
-        <h2 id="status">Ewaade's turn (O)</h2>
+    <form id="setup-form" class="setup-container">
+        <h2>Enter Player Names</h2>
+        <div class="input-group">
+            <label for="p1-name">Player 1 (X):</label>
+            <input type="text" id="p1-name" required placeholder="e.g., Alice">
+        </div>
+        <div class="input-group">
+            <label for="p2-name">Player 2 (O):</label>
+            <input type="text" id="p2-name" required placeholder="e.g., Bob">
+        </div>
+        <button type="submit" id="start-btn">Start Game</button>
+    </form>
+    <div id="game-container" class="game-container">
+        <div class="scoreboard">
+            <div class="score-card">
+                <span id="p1-score-label">Player 1</span>
+                <span id="p1-score-display" class="score-num">0</span>
+            </div>
+            <div class="score-divider">vs</div>
+            <div class="score-card">
+                <span id="p2-score-label">Player 2</span>
+                <span id="p2-score-display" class="score-num">0</span>
+            </div>
+        </div>
+        <h2 id="status"></h2>
         <div id="grid" class="grid">
             <button class="cell" data-index="0"></button>
             <button class="cell" data-index="1"></button>
@@ -22,7 +45,10 @@
             <button class="cell" data-index="8"></button>
         </div>
 
-        <button id="reset-btn">Restart Game</button>
+        <div class="button-actions">
+            <button id="switch-btn">🔄Switch Starting Player</button>
+            <button id="reset-btn">Restart Game</button>
+        </div>
     </div>
     <script type="text/javascript"  src="js/main.js"></script>
 </body>
